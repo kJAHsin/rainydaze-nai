@@ -1,0 +1,44 @@
+:root {
+    --clr-primary: #270C41;
+    --clr-secondary: #4C4452;
+    --clr-neutral: #B2A8B8;
+}
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+/* reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* utility classes */
+.flex {
+    display: flex;
+}
+.column {
+    flex-direction: column;
+}
+
+body {
+    min-height: 100dvh;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    background-color: var(--clr-neutral);
+    color: var(--clr-primary);
+}
+
+nav {
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    top: 2em;
+}
+
+nav > ul {
+    align-items: center;
+    gap: 5vw;
+}
