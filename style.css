@@ -138,7 +138,7 @@ nav {
 }
 
 .contact__image {
-    width: 40%;
+    max-width: 500px;
     max-height: 524px;
     border-radius: .5em;
 }
