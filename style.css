@@ -76,14 +76,17 @@ img {
 nav {
     align-items: flex-end;
     justify-content: space-between;
+    max-width: 1240px;
+    margin-inline: auto;
 }
 
 .logo {
-    width: 30%;    
+    width: 15em;    
 }
 
 .nav__links {
     gap: 1em;
+    justify-content: flex-end;
 }
 
 /* carousel and wrapper */
