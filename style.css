@@ -95,7 +95,7 @@ nav {
 
 .carousel__wrapper {
     overflow-x: hidden;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .carousel {
