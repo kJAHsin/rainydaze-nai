@@ -52,7 +52,6 @@ button {
     background: var(--clr-primary);
     color: white;
     border-radius: .25em;
-    margin-block: 3em;
     cursor: pointer;
 }
 
@@ -115,6 +114,10 @@ nav {
     align-items: center;
 }
 
+.view--products {
+    margin-block: 3em;
+}
+
 .scroll__arrow {
     width: 5em;
 }
@@ -127,25 +130,67 @@ nav {
     transform: scaleX(-1);
 }
 
-/* contact portion of page */
-.contact__container {
+/* about portion of page */
+.about__container {
     justify-content: center;
     padding: 2em 5em;
 }
 
-.contact__content {
+.about__content {
     gap: 1em;
 }
 
-.contact__image {
+.about__image {
     max-width: 500px;
     max-height: 524px;
     border-radius: .5em;
 }
 
-.contact__image > img {
+.about__image > img {
     object-fit: cover;
     object-position: bottom;
     height: 100%;
     border-radius: inherit;
+}
+
+/* footer */
+.footer__wrapper {
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5vw;
+    background-color: var(--clr-secondary);
+    padding: 3em;
+}
+
+.footer__wrapper > form {
+    gap: 1em;
+    height: 13em;
+    background-color: var(--clr-neutral);
+    padding: 2em;
+    border-radius: .25em;
+    text-align: center;
+}
+
+.contact__info {
+    gap: 1em;
+    position: relative;
+}
+
+.contact__info > li::before {
+    content: "";
+    background:center no-repeat;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    transform: translateX(-100%);
+}
+
+.contact__info > li:first-child::before {
+    background-image: url(./images/mailbox.svg);
+}
+.contact__info > li:nth-child(2)::before {
+    background-image: url(./images/phone.svg);
+}
+.contact__info > li:nth-child(3)::before {
+    background-image: url(./images/mail.svg);
 }

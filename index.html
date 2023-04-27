@@ -87,8 +87,8 @@
 					/>
 				</svg>
 			</div>
-			<div class="contact__container flex">
-				<div class="contact__content flex column">
+			<div class="about__container flex">
+				<div class="about__content flex column">
 					<h2>What do we stand for here at Rainydays?</h2>
 					<p>Lorem ipsum dolor sit amet consectetur. At pellentesque volutpat risus sed faucibus commodo dapibus sollicitudin. Lectus nisi nisi tincidunt vel cursus nibh. Faucibus consequat in adipiscing ullamcorper ipsum sit nibh enim. Sit fusce vitae id sed egestas neque volutpat arcu in. Turpis amet penatibus aenean ipsum diam mattis maecenas. Maecenas integer pellentesque bibendum curabitur sit ut felis.</p>
 					<h2>Why the hell do we do it?</h2>
@@ -96,19 +96,24 @@
 					<h2>How can you help?</h2>
 					<p>Lorem ipsum dolor sit amet consectetur. Turpis amet penatibus aenean ipsum diam mattis maecenas. Maecenas integer pellentesque bibendum curabitur sit ut felis.</p>
 				</div>
-				<div class="contact__image">
+				<div class="about__image">
 					<img src="https://images.unsplash.com/photo-1542820893-f3d652b53f50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="woman on mountain">
 				</div>
 			</div>
 		</main>
 		<footer>
 			<div class="footer__wrapper flex">
-				<form action="join" class="mailing__list">
+				<ul class="contact__info flex column" aria-label="contact information">
+					<li aria-label="address of headquarters">Rainydays Inc</br>Middlebury, IN 46540</li>
+					<li aria-label="telephone number">+47 909 ** 063</li>
+					<li aria-label="email">whats_your_problem?@rainydays.wtf</li>
+				</ul>
+				<form action="join" class="mailing__list flex column">
 					<h3>Join our mailing list!</h3>
 					<input type="email" name="mailingList" id="mailingList">
 					<button type="submit">Join Now</button>
 				</form>
-				<form action="contact" class="contact__form">
+				<form action="contact" class="contact__form flex column">
 					<h3>Contact us</h3>
 					<input type="email" name="contactForm" id="contactForm">
 					<button type="submit">Leave us a message</button>
