@@ -157,6 +157,7 @@ nav {
 
 /* footer */
 footer {
+    position: relative;
     justify-content: center;
     background-color: var(--clr-secondary);
 }
@@ -217,7 +218,7 @@ footer {
 .social__icons {
     width: 50%;
     justify-content: space-between;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
