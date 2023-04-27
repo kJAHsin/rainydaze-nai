@@ -11,28 +11,109 @@
 	<body>
 		<header>
 			<nav class="flex">
-                <a href="#" class="logo">
-                    <img src="./images/logo.png" alt="logo image" />
-                </a>
-				<ul class="flex">
-					<li><a href="./index.html" class="nav__links">home</a></li>
-					<li><a href="./index.html" class="nav__links">products</a></li>
-					<li><a href="./index.html" class="nav__links">about</a></li>
-					<li><a href="./index.html" class="nav__links">contact</a></li>
-					<li><a href="./index.html" class="nav__links">shopping cart</a></li>
+				<a href="./index.html" class="logo">
+					<img src="./images/logo.png" alt="logo image" />
+				</a>
+				<ul class="nav__links flex">
+					<li><a href="./index.html" class="nav__link">home</a></li>
+					<li>
+						<a href="./index.html" class="nav__link">products</a>
+					</li>
+					<li><a href="./index.html" class="nav__link">about</a></li>
+					<li>
+						<a href="./index.html" class="nav__link">contact</a>
+					</li>
+					<li>
+						<a href="./index.html" class="nav__link"
+							>shopping cart</a
+						>
+					</li>
 				</ul>
 			</nav>
 		</header>
-        <div class="carousel__container">
-            <div class="card">
-                <img src="" alt="">
-            </div>
-            <div class="card">
-                <img src="./images/bruiser.png" alt="">
-            </div>
-            <div class="card">
-                <img src="" alt="">
-            </div>
-        </div>
+		<main>
+			<h1 class="flex">Browse our selection!</h1>
+			<div class="carousel__wrapper flex">
+				<ul class="carousel grid">
+					<li class="carousel__card">
+						<img src="./images/bruiser.png" alt="" />
+					</li>
+					<li class="carousel__card">
+						<img src="./images/bruiser.png" alt="" />
+					</li>
+					<li class="carousel__card">
+						<img src="./images/bruiser.png" alt="" />
+					</li>
+					<li class="carousel__card">
+						<img src="./images/bruiser.png" alt="" />
+					</li>
+					<li class="carousel__card">
+						<img src="./images/bruiser.png" alt="" />
+					</li>
+				</ul>
+			</div>
+			<div class="scroll__wrapper">
+				<svg
+					width="30"
+					height="23"
+					viewBox="0 0 20 13"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					class="scroll__arrow"
+				>
+					<path
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M15.416 0.722642C15.2628 0.492878 14.9524 0.430791 14.7226 0.583967C14.4929 0.737143 14.4308 1.04758 14.584 1.27734L18.0658 6.50005H1C0.723858 6.50005 0.5 6.72391 0.5 7.00005C0.5 7.2762 0.723858 7.50005 1 7.50005L17.9596 7.50005L14.6096 11.6876C14.4371 11.9033 14.472 12.2179 14.6877 12.3904C14.9033 12.5629 15.2179 12.528 15.3904 12.3123L19.3858 7.31807C19.4563 7.23268 19.499 7.1235 19.5 7.00438C19.5 6.99719 19.5 6.99 19.4997 6.98281C19.4994 6.97432 19.4989 6.96583 19.4982 6.95736C19.4908 6.86966 19.4607 6.78841 19.4139 6.71947L15.416 0.722642Z"
+						fill="currentColor"
+					/>
+				</svg>
+				<button class="view--products" id="viewProducts">
+					View all products
+				</button>
+				<svg
+					width="30"
+					height="23"
+					viewBox="0 0 20 13"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					class="scroll__arrow"
+				>
+					<path
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M15.416 0.722642C15.2628 0.492878 14.9524 0.430791 14.7226 0.583967C14.4929 0.737143 14.4308 1.04758 14.584 1.27734L18.0658 6.50005H1C0.723858 6.50005 0.5 6.72391 0.5 7.00005C0.5 7.2762 0.723858 7.50005 1 7.50005L17.9596 7.50005L14.6096 11.6876C14.4371 11.9033 14.472 12.2179 14.6877 12.3904C14.9033 12.5629 15.2179 12.528 15.3904 12.3123L19.3858 7.31807C19.4563 7.23268 19.499 7.1235 19.5 7.00438C19.5 6.99719 19.5 6.99 19.4997 6.98281C19.4994 6.97432 19.4989 6.96583 19.4982 6.95736C19.4908 6.86966 19.4607 6.78841 19.4139 6.71947L15.416 0.722642Z"
+						fill="currentColor"
+					/>
+				</svg>
+			</div>
+			<div class="contact__container flex">
+				<div class="contact__content flex column">
+					<h2>What do we stand for here at Rainydays?</h2>
+					<p>Lorem ipsum dolor sit amet consectetur. At pellentesque volutpat risus sed faucibus commodo dapibus sollicitudin. Lectus nisi nisi tincidunt vel cursus nibh. Faucibus consequat in adipiscing ullamcorper ipsum sit nibh enim. Sit fusce vitae id sed egestas neque volutpat arcu in. Turpis amet penatibus aenean ipsum diam mattis maecenas. Maecenas integer pellentesque bibendum curabitur sit ut felis.</p>
+					<h2>Why the hell do we do it?</h2>
+					<p>Lorem ipsum dolor sit amet consectetur. At pellentesque volutpat risus sed faucibus commodo dapibus sollicitudin. Lectus nisi nisi tincidunt vel cursus nibh.</p>
+					<h2>How can you help?</h2>
+					<p>Lorem ipsum dolor sit amet consectetur. Turpis amet penatibus aenean ipsum diam mattis maecenas. Maecenas integer pellentesque bibendum curabitur sit ut felis.</p>
+				</div>
+				<div class="contact__image">
+					<img src="https://images.unsplash.com/photo-1542820893-f3d652b53f50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="woman on mountain">
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="footer__wrapper flex">
+				<form action="join" class="mailing__list">
+					<h3>Join our mailing list!</h3>
+					<input type="email" name="mailingList" id="mailingList">
+					<button type="submit">Join Now</button>
+				</form>
+				<form action="contact" class="contact__form">
+					<h3>Contact us</h3>
+					<input type="email" name="contactForm" id="contactForm">
+					<button type="submit">Leave us a message</button>
+				</form>
+			</div>
+		</footer>
 	</body>
 </html>
