@@ -1,4 +1,9 @@
-const apiURL = "https://api.noroff.dev/api/v1/rainy-days";
-fetch(apiURL)
-	.then(res => res.json())
-	.then(data => console.log(data))
+import fetchProducts, { apiURL } from "./products.js";
+fetchProducts();
+
+const scrollArrowL = document.querySelector(".scroll__arrow:first-of-type");
+const scrollArrowR = document.querySelector(".scroll__arrow:nth-of-type(2)");
+
+scrollArrowL.addEventListener("click", () => {
+	console.log("fuck you")
+})
