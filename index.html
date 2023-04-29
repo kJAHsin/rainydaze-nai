@@ -11,9 +11,34 @@
 	<body>
 		<header>
 			<nav class="flex">
-				<a href="./index.html" class="logo">
-					<img src="./images/logo.png" alt="logo image" />
-				</a>
+				<a href="./index.html" class="logo"
+					><img src="./images/logo.png" alt="logo image"
+				/></a>
+				<div class="hamburger__link">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="icon icon-tabler icon-tabler-menu-2 hamburger__link"
+						id="burgerClosed"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						stroke-width="2"
+						stroke="currentColor"
+						fill="none"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						aria-expanded="false"
+					>
+						<path
+							stroke="none"
+							d="M0 0h24v24H0z"
+							fill="none"
+						></path>
+						<path d="M4 6l16 0" id="topLine"></path>
+						<path d="M4 12l16 0" id="midLine"></path>
+						<path d="M4 18l16 0" id="botLine"></path>
+					</svg>
+				</div>
 				<ul class="nav__links flex">
 					<li><a href="./index.html" class="nav__link">home</a></li>
 					<li>
@@ -135,7 +160,7 @@
 				</ul>
 				<form action="contact" class="contact__form flex column">
 					<h3>Contact us</h3>
-					<input type="text" name="contactName" id="contactName
+					<input type="text" name="contactName" id="contactName"
 					placeholder="name">
 					<input
 						type="email"
