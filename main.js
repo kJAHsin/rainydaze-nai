@@ -16,12 +16,14 @@ scrollArrowR.addEventListener("click", () => {
 const burgerClosed = document.getElementById("burgerClosed");
 
 // grabbing svg lines in toggle and adding transition
+const transition = "all 1s ease-out";
+
 const burgerTop = document.getElementById("topLine");
 const burgerMid = document.getElementById("midLine");
 const burgerBot = document.getElementById("botLine");
-burgerTop.style.transition = "all 3s ease-out";
-burgerMid.style.transition = "all 3s ease-out";
-burgerBot.style.transition = "all 3s ease-out";
+burgerTop.style.transition = transition;
+burgerMid.style.transition = transition;
+burgerBot.style.transition = transition;
 burgerTop.style.transformOrigin = "bottom";
 burgerBot.style.transformOrigin = "top";
 
@@ -34,8 +36,11 @@ navToggle.addEventListener("click", () => {
 		burgerMid.style.opacity = 0;
 		burgerBot.style.transform = "translateY(-25%)";
 		burgerClosed.ariaExpanded = "true";
-		burgerTop.style.transform = "translate(-51%, 2.75%) rotate(45deg)";
-		burgerBot.style.transform = "translate(-51%, -2.75%) rotate(-45deg)";
+
+		setTimeout(function twist() {
+			burgerTop.style.transform = "translate(-51%, 2.75%) rotate(45deg)";
+			burgerBot.style.transform = "translate(-51%, -2.75%) rotate(-45deg)";
+		}, 1000)
 	}
 	else {
 		console.log("ouch");
