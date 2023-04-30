@@ -5,7 +5,6 @@ const fetchProducts = () => {
 	fetch(apiURL)
 	.then((data) => {
 		if (data.ok) {
-			console.log(`all good brother! status: ${data.status}`)
 			return data.json();
 		}
 		else {
@@ -24,7 +23,7 @@ const fetchProducts = () => {
 		img.dataset.salePrice = salePrice;
 		carouselCards[idx].append(img);
 	}))
-	.catch((err) => console.log(`you got an error bro: ${err}`))
+	.catch((err) => alert(`you got an error bro: ${err}`))
 };
 
 export default fetchProducts;
