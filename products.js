@@ -1,9 +1,17 @@
-export const apiURL = "https://api.noroff.dev/api/v1/rainy-days";
+const apiURL = "https://api.noroff.dev/api/v1/rainy-days";
 const carouselCards = document.querySelectorAll(".carousel__card");
 
 const fetchProducts = () => {
 	fetch(apiURL)
-	.then((data) => data.json())
+	.then((data) => {
+		if (data.ok) {
+			console.log(`all good brother! status: ${data.status}`)
+			return data.json();
+		}
+		else {
+			console.log(`ohhh nooo  status: ${data.status}`)
+		}
+	})
 	.then((data) => data.forEach((product, idx) => {
 		const img = document.createElement("img");
 		const id = `${product.id}`;

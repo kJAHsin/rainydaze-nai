@@ -1,4 +1,4 @@
-import fetchProducts, { apiURL } from "./products.js";
+import fetchProducts from "./products.js";
 fetchProducts();
 
 const scrollArrowL = document.querySelector(".scroll__arrow:first-of-type");
@@ -28,7 +28,7 @@ burgerBot.style.transition = transition;
 burgerTop.style.transformOrigin = "bottom";
 burgerBot.style.transformOrigin = "top";
 
-// change attributes on click
+// animate on click and toggle ariaExpanded
 const navToggle = document.querySelector(".hamburger__link");
 
 navToggle.addEventListener("click", () => {
