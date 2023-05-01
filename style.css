@@ -154,16 +154,17 @@ nav {
 /* carousel and wrapper */
 
 .carousel__wrapper {
-    justify-content: center;
+    overflow-x: hidden;
 }
 
 .carousel {
-    overflow-x: hidden;
     max-width: 600px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 1fr;
     gap: 1em;
-    transform: translateX(0)
+    justify-content: center;
+    transform: translateX(0);
+    transition: transform 350ms ease-out;
 }
 
 .carousel__card {
@@ -175,6 +176,7 @@ nav {
     padding: 1em;
 }
 
+/* scroll arrows */
 .scroll__wrapper {
     display: flex;
     justify-content: center;
