@@ -13,4 +13,3 @@ scrollArrowL.addEventListener("click", () => {
 scrollArrowR.addEventListener("click", () => {
 	console.log("right step now ya'll")
 })
-
