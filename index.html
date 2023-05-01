@@ -3,9 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />		
+        <meta name="description" content="home page for Rainydays Jacket Company">
 		<link rel="stylesheet" href="./style.css" />
-		<script type="module" src="./main.js"></script>
+		<script type="module" src="./js/main.js"></script>
 		<title>Rainydays Jacket Co. | Home</title>
 	</head>
 	<body>
@@ -35,18 +36,14 @@
 					</svg>
 				</div>
 				<ul class="nav__links flex">
-					<li><a href="./index.html" class="nav__link">home</a></li>
+					<li><a href="./index.html" class="nav__link" aria-disabled="true">home</a></li>
 					<li>
-						<a href="./index.html" class="nav__link">products</a>
+						<a href="./products.html" class="nav__link" aria-disabled="false">products</a>
 					</li>
-					<li><a href="./index.html" class="nav__link">about</a></li>
-					<li>
-						<a href="./index.html" class="nav__link">contact</a>
+						<a href="./contact.html" class="nav__link" aria-disabled="false">contact</a>
 					</li>
 					<li>
-						<a href="./index.html" class="nav__link"
-							>shopping cart</a
-						>
+						<a href="./cart.html" class="nav__link" aria-disabled="false">shopping cart</a>
 					</li>
 				</ul>
 			</nav>
@@ -153,18 +150,6 @@
 						whats_your_problem?@rainydays.wtf
 					</li>
 				</ul>
-				<form action="contact" class="contact__form flex column">
-					<h3>Contact us</h3>
-					<input type="text" name="contactName" id="contactName"
-					placeholder="name">
-					<input
-						type="email"
-						name="contactMail"
-						id="contactMail"
-						placeholder="email"
-					/>
-					<button type="submit">Leave us a message</button>
-				</form>
 				<div class="social__icons flex">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"

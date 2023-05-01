@@ -1,11 +1,7 @@
-import fetchProducts from "./products.js";
+import fetchProducts from "./carousel.js";
 fetchProducts();
 import { toggleNav } from "./navToggle.js";
 toggleNav();
-
-
-
-
 
 const scrollArrowL = document.querySelector(".scroll__arrow:first-of-type");
 const scrollArrowR = document.querySelector(".scroll__arrow:nth-of-type(2)");

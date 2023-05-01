@@ -1,5 +1,7 @@
+import { toggleNav } from "./navToggle.js";
+toggleNav();
+
 const apiURL = "https://api.noroff.dev/api/v1/rainy-days";
-const carouselCards = document.querySelectorAll(".carousel__card");
 
 const fetchProducts = () => {
 	fetch(apiURL)
@@ -13,15 +15,13 @@ const fetchProducts = () => {
 	})
 	.then((data) => data.forEach((product, idx) => {
 		const img = document.createElement("img");
-		const salePrice = `${product.discountedPrice}`;
 		img.dataset.prodID = `${product.id}`;
 		img.src = `${product.image}`;
 		img.alt = `${product.description}`;
-		img.dataset.salePrice = salePrice;
-		carouselCards[idx].append(img);
+		img.dataset.salePrice = `${product.discountedPrice}`;
+		[idx].append(img);
 	}))
 	.catch((err) => alert(`you got an error bro: ${err}`))
 };
 
-export default fetchProducts;
-
+fetchProducts();
