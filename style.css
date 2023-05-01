@@ -4,6 +4,8 @@
     --clr-neutral: #ddf7f3;
 
     --max-width: 1240px;
+
+    --transition-time: 450;
 }
 
 /* font */
@@ -98,13 +100,27 @@ nav {
 /* nav toggle */
 .hamburger__link {
     width: 2em;
-    height: 1.75em;
+    height: 2em;
 }
 
-#burgerParent {
-    width: 100%;
-    height: 100%;
+/* nav toggle animation */
+.hamburger__link > * {
+    transition: 450ms ease-out;
 }
+
+
+.top__line.navOpenTop {
+    animation: open-navTop calc(var(--transition-time) * 2) ease-out;
+}
+
+.mid__line.navOpenMid {
+    opacity: 0;
+}
+
+.bot__line.navOpenBot {
+    animation: open-navBot calc(var(--transition-time) * 2) ease-out;
+}
+
 
 /* carousel and wrapper */
 
