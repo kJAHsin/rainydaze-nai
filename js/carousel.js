@@ -13,10 +13,10 @@ const fetchProducts = () => {
 	})
 	.then((data) => data.forEach((product, idx) => {
 		const img = document.createElement("img");
-		img.dataset.prodID = `${product.id}`;
 		img.src = `${product.image}`;
 		img.alt = `${product.description}`;
-		img.dataset.salePrice = `${product.discountedPrice}`;
+		img.dataset.prodID = `${product.id}`;
+		img.dataset.salePrice = product.discountedPrice;
 		carouselCards[idx].append(img);
 	}))
 	.catch((err) => alert(`you got an error bro: ${err}`))

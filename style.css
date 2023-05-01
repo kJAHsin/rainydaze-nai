@@ -276,13 +276,18 @@ footer {
 
 
 /* products.html styles */
-.product__grid {
-    flex: 0;
+.products__container {
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em;
 }
 
 .product {
-    width: clamp(15em, 85%, 20em);
+    width: 10em;
+    aspect-ratio: 3 / 4;
+    flex-shrink: 0;
+    border: 1px red solid;
 }
 
 
