@@ -3,7 +3,7 @@ export const toggleNav = () => {
 	const burgerTop = document.getElementById("topLine");
 	const burgerMid = document.getElementById("midLine");
 	const burgerBot = document.getElementById("botLine");
-	const navLinks = document.getElementById("navLinks");
+	const navLinks = document.querySelector(".nav__links");
 
 	// grabbing nav menu toggle and svg to toggle ariaExpanded
 	const burgerClosed = document.getElementById("burgerClosed");
