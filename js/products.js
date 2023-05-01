@@ -24,19 +24,25 @@ const fetchProducts = () => {
 				productCard.dataset.gender = `${product.gender}`;
 				productCard.dataset.size = `${product.sizes}`;
 				productCard.dataset.baseColor = `${product.baseColor}`;
+				productCard.dataset.origPrice = product.price;
+				productCard.dataset.salePrice = product.discountedPrice;
 				productContainer.appendChild(productCard);
 
 				const productIMG = document.createElement("img");
-				productIMG.dataset.origPrice = product.price;
-				productIMG.dataset.salePrice = product.discountedPrice;
 				productIMG.src = `${product.image}`;
 				productIMG.alt = `${product.description}`;
 				productCard.append(productIMG);
 			})
 		)
+
+        // set timeout to make sure the products are loaded before searching through them
         .then(setTimeout(()  => search(), 350))
+
+        // catching error from if loop
 		.catch((err) => alert(`you got an error bro: ${err}`));
 };
 
+
+// calling functions
 fetchProducts();
 toggleNav();

@@ -36,6 +36,7 @@ header {
 main {
     justify-content: center;
     align-items: center;
+    padding: 2em 2em 20em;
 }
 
 h1 {
@@ -47,6 +48,11 @@ h1 {
 h2 {
     max-width: 30ch;
     font-size: 1.25em;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1em;
     font-weight: 500;
 }
 
@@ -84,10 +90,10 @@ img {
 
 /* layout styling */
 nav {
+    max-width: var(--max-width);
     align-items: flex-end;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: var(--max-width);
     margin-inline: auto;
 }
 
@@ -185,6 +191,11 @@ nav {
 
 .view--products {
     margin-block: 3em;
+    color: white;
+}
+
+.view--products > a {
+    color: white;
 }
 
 .scroll__arrow {
@@ -301,10 +312,67 @@ footer {
     flex-shrink: 0;
     padding: 1em;
     border-radius: .25em;
-    border: 1px red solid;
     background-color: white;
 }
 
+.searchbar__container {
+    position: relative;
+    width: min(25em, 100%);
+}
+
+.searchbar__wrapper {
+    position: relative;
+    align-items: center;
+}
+
+.searchbar__wrapper > input {
+    width: 100%;
+    line-height: 3;
+    padding-inline: 1em;
+    border-radius: 100vw;
+    border: 1px solid transparent;
+    transition: border-color 350ms ease-out;
+}
+
+.searchbar__wrapper > input:hover, .searchbar__wrapper > input:focus-within, .searchbar__wrapper > input:active {
+    outline: none;
+    border-color: var(--clr-primary);
+}
+
+.search__label {
+    position: absolute;
+    right: 1em;
+}
+
+/* search options */
+.search__options {
+    position: absolute;
+    top: 2.625em;
+    width: 100%;
+    background-color: white;
+    transition: 350ms ease-out;
+    height: fit-content;
+    border-radius: 1em;
+}
+
+.search__options > li {
+    width: 100%;
+    padding: .5em;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2vw;
+    align-items: center;
+    transform-origin: top;
+    transition: 350ms ease-out;
+}
+
+.search__options > li > h4 {
+    margin-left: auto;
+}
+
+.thumbnail {
+    width: 2em;
+}
 
 
 

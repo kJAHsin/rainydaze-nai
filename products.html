@@ -43,16 +43,24 @@
 			</nav>
 		</header>
 		<main class="flex column">
-            <div class="searchbar__wrapper">
-                <input type="text" name="jacketSearch" id="jacketSearch" placeholder="Search our collection...">
-                <label for="jacketSearch">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="search__icon" id="searchGlass" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
-                        <path d="M21 21l-6 -6"></path>
-                    </svg>
-                </label>
-            </div>
 
+            <div class="searchbar__container">
+                <!-- search bar -->
+                <div class="searchbar__wrapper flex">
+                    <input type="text" name="jacketSearch" id="jacketSearch" placeholder="Search our collection...">
+                    <label for="jacketSearch" class="search__label">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="search__icon" id="searchGlass" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
+                            <path d="M21 21l-6 -6"></path>
+                        </svg>
+                    </label>
+                </div>
+                
+                <!-- container for search matches and suggestions -->
+                <ul class="search__options flex column" id="searchOptions"></ul>
+            </div>
+            
+            <!-- products container -->
             <div class="products__container flex"></div>
 
 		</main>
