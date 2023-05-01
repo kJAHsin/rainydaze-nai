@@ -5,6 +5,7 @@ import { search } from "./search-bar.js";
 const apiURL = "https://api.noroff.dev/api/v1/rainy-days";
 const productContainer = document.querySelector(".products__container");
 
+
 const fetchProducts = () => {
 	fetch(apiURL)
 		.then((data) => {
@@ -33,9 +34,9 @@ const fetchProducts = () => {
 				productCard.append(productIMG);
 			})
 		)
+        .then(setTimeout(()  => search(), 350))
 		.catch((err) => alert(`you got an error bro: ${err}`));
 };
 
 fetchProducts();
 toggleNav();
-search();
