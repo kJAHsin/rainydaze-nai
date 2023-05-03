@@ -328,7 +328,7 @@ nav {
     background-color: var(--clr-primary);
     transform: translateY(100%);
     opacity: 0;
-    transition: transform 350ms ease-out, opacity 250ms ease-in 100ms;
+    transition: transform 550ms ease-out, opacity 350ms ease-in 150ms;
 }
 
 .carousel__card:hover > .carousel__overlay, 
@@ -349,9 +349,9 @@ nav {
     height: 2em;
     padding: .25em;
     cursor: pointer;
-    transform: scale(1);
-    opacity: 1;
     transition: all 350ms ease-in;
+    transform: scale(1);
+    z-index: 1;
 }
 
 .scroll__arrow > svg {
@@ -362,9 +362,18 @@ nav {
     transform: rotate(180deg);
 }
 
-.scroll__wrapper > .scroll__arrow.disabled {
-    opacity: .2;
+.scroll__wrapper > .scroll__arrow:first-of-type.disabled {
+    opacity: 0;
+    transform: rotate(180deg) translateX(-100%);
+    z-index: -1;
 }
+
+.scroll__wrapper > .scroll__arrow:nth-of-type(2).disabled {
+    opacity: 0;
+    transform:translateX(-100%);
+    z-index: -1;
+}
+
 
 /* about portion of page */
 .about__container {

@@ -38,7 +38,7 @@ const fetchProducts = () => {
 		overLay.appendChild(productName);
 
 		const productPrice = document.createElement("h3");
-		productPrice.innerText = `${product.discountedPrice}`;
+		productPrice.innerText = `$${product.discountedPrice}`;
 		overLay.appendChild(productPrice);
 
 	}))

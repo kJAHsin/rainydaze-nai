@@ -5,6 +5,7 @@ export const toggleNav = () => {
 	const burgerBot = document.getElementById("botLine");
 	const navLinks = document.querySelector(".nav__links");
 
+
 	// grabbing nav menu toggle and svg to toggle ariaExpanded
 	const burgerClosed = document.getElementById("burgerClosed");
 	const navToggle = document.querySelector(".hamburger__link");
@@ -20,6 +21,7 @@ export const toggleNav = () => {
 
             // set ariaExpanded to true
 			burgerClosed.ariaExpanded = "true";
+			
 		} else {
 			// remove class from nav toggle
 			burgerTop.classList.remove("navOpenTop");

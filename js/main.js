@@ -15,12 +15,10 @@ scrollArrowL.addEventListener("click", () => {
 	if (translateX <= 75) {
 		translateX += 50;
 		carousel.style.transform = `translateX(${translateX}%)`;
-		console.log(translateX);
 	}
-	else if (translateX === 100){
+	else{
 		scrollArrowL.classList.add("disabled");
 	}
-	console.log(scrollArrowL.classList)	 
 })
 
 scrollArrowR.addEventListener("click", () => {
@@ -28,7 +26,6 @@ scrollArrowR.addEventListener("click", () => {
 	if (translateX >= -75) {
 		translateX -= 50;
 		carousel.style.transform = `translateX(${translateX}%)`;
-		console.log(translateX)
 	}
 	else {
 		scrollArrowR.classList.add("disabled");

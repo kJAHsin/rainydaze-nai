@@ -7,10 +7,6 @@ function clearQuery() {
 }
 
 
-
-
-
-
 // filter through products with search
 export function search() {
 	const searchBar = document.getElementById("jacketSearch");
