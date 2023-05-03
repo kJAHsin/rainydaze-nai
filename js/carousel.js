@@ -8,7 +8,7 @@ const fetchProducts = () => {
 			return data.json();
 		}
 		else {
-			console.log(`ohhh nooo  status: ${data.status}`)
+			console.error(`ohhh nooo  status: ${data.status}`)
 		}
 	})
 	.then((data) => data.forEach((product, idx) => {
