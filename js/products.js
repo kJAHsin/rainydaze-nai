@@ -35,7 +35,7 @@ const fetchProducts = () => {
 		)
 
         // set timeout to make sure the products are loaded before searching through them
-        .then(setTimeout(()  => search(), 350))
+        .then(setTimeout(()  => search(), 3000))
 
         // catching error from if loop
 		.catch((err) => alert(`you got an error bro: ${err}`));
@@ -48,9 +48,6 @@ function loaderHide() {
 		loader.classList.toggle("hide");
 	});
 }
-
-
-
 
 // calling functions
 fetchProducts();

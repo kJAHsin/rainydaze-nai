@@ -113,7 +113,7 @@ img {
     justify-content: center;
     opacity: 1;
     clip-path: circle(100%);
-    transition: opacity 450ms ease-in-out, clip-path 250ms ease-in-out 200ms;
+    transition: opacity 850ms ease-in-out, clip-path 650ms ease-in-out 200ms;
 }
 
 /* hiding loader */
@@ -123,6 +123,7 @@ img {
 }
 
 .balls {
+    position: absolute;
     min-width: 600px;
     aspect-ratio: 1;
     display: flex;
@@ -130,7 +131,7 @@ img {
     padding: 11em;
     margin: auto;
     perspective: 450px;
-    animation: rotate 25s infinite linear, pulse 10s infinite linear;
+    animation: rotate 5s infinite linear, pulse 10s infinite linear;
     transform: scale(.25);
     overflow: hidden;
     border-radius: 50%;
@@ -194,7 +195,7 @@ img {
   
   @keyframes rotate {
     100% {
-      transform: rotateZ(6turn);
+      transform: rotateZ(60turn);
     }
   }
   
