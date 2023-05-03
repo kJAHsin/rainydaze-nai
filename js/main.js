@@ -8,19 +8,30 @@ toggleNav();
 const carousel = document.querySelector(".carousel");
 const scrollArrowL = document.querySelector(".scroll__arrow:first-of-type");
 const scrollArrowR = document.querySelector(".scroll__arrow:nth-of-type(2)");
-let translateX = 0;
+let translateX = 100;
 
 scrollArrowL.addEventListener("click", () => {
+	scrollArrowR.classList.remove("disabled");
 	if (translateX <= 75) {
 		translateX += 50;
 		carousel.style.transform = `translateX(${translateX}%)`;
-	}	
+		console.log(translateX);
+	}
+	else if (translateX === 100){
+		scrollArrowL.classList.add("disabled");
+	}
+	console.log(scrollArrowL.classList)	 
 })
 
 scrollArrowR.addEventListener("click", () => {
+	scrollArrowL.classList.remove("disabled")
 	if (translateX >= -75) {
 		translateX -= 50;
 		carousel.style.transform = `translateX(${translateX}%)`;
+		console.log(translateX)
+	}
+	else {
+		scrollArrowR.classList.add("disabled");
 	}	
 })
 
@@ -30,5 +41,6 @@ function loaderHide() {
 		loader.classList.toggle("hide");
 	});
 }
+
 
 loaderHide();
