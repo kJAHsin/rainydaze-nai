@@ -90,6 +90,11 @@ img {
     height: 100%;
 }
 
+[data-disabled="true"] {
+    opacity: .7;
+    pointer-events: none;
+}
+
 /* utility classes */
 .flex {display: flex;}
 .column {flex-direction: column;}
