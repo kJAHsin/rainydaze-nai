@@ -20,6 +20,14 @@
     list-style: none;
 }
 
+/* screen reader only */
+.sr-only {
+    height: 0;
+    width: 0;
+    position: absolute;
+    overflow: hidden;
+}
+
 /* global styles */
 body {
     font-family: "Poppins", sans-serif;
