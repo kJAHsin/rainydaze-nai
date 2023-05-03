@@ -1,7 +1,6 @@
 import { toggleNav } from "./navToggle.js";
 import { search } from "./search-bar.js";
 
-
 const apiURL = "https://api.noroff.dev/api/v1/rainy-days";
 const productContainer = document.querySelector(".products__container");
 
@@ -43,6 +42,17 @@ const fetchProducts = () => {
 };
 
 
+function loaderHide() {
+	window.addEventListener("load", () => {
+		const loader = document.querySelector(".loader");
+		loader.classList.toggle("hide");
+	});
+}
+
+
+
+
 // calling functions
 fetchProducts();
 toggleNav();
+loaderHide();

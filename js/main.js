@@ -12,14 +12,23 @@ let translateX = 0;
 
 scrollArrowL.addEventListener("click", () => {
 	if (translateX <= 75) {
-		translateX += 25;
+		translateX += 50;
 		carousel.style.transform = `translateX(${translateX}%)`;
 	}	
 })
 
 scrollArrowR.addEventListener("click", () => {
 	if (translateX >= -75) {
-		translateX -= 25;
+		translateX -= 50;
 		carousel.style.transform = `translateX(${translateX}%)`;
 	}	
 })
+
+function loaderHide() {
+	window.addEventListener("load", () => {
+		const loader = document.querySelector(".loader");
+		loader.classList.toggle("hide");
+	});
+}
+
+loaderHide();

@@ -101,6 +101,115 @@ img {
 .grid {display: grid;}
 .hidden {display: none;}
 
+/* loader styling */
+.loader {
+    width: 100dvw;
+    height: 100dvh;
+    position: fixed;
+    inset: 0;
+    background-color: var(--clr-neutral);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    clip-path: circle(100%);
+    transition: opacity 450ms ease-in-out, clip-path 250ms ease-in-out 200ms;
+}
+
+/* hiding loader */
+.hide.loader {
+    opacity: 0;
+    clip-path: circle(0%);
+}
+
+.balls {
+    min-width: 600px;
+    aspect-ratio: 1;
+    display: flex;
+    gap: 1em;
+    padding: 11em;
+    margin: auto;
+    perspective: 450px;
+    animation: rotate 25s infinite linear, pulse 10s infinite linear;
+    transform: scale(.25);
+    overflow: hidden;
+    border-radius: 50%;
+    opacity: 1;
+    box-shadow: inset 2px 2px 4px -1px rgba(180, 10, 120, .5),
+                inset 5px 5px 12px -3px rgba(180, 10, 120, .6),
+                inset 12px 12px 30px rgba(180, 10, 120, .3),
+                inset -4px -4px 12px var(--clr-primary)
+  }
+  
+  .ball {
+    width: .75em;
+    height: .75em;
+    background-color: var(--clr-primary);
+    background: linear-gradient(0deg, var(--clr-neutral) 0%, var(--clr-secondary) 77%);
+    border-radius: 50%;
+    opacity: 1;
+    animation: bounce 8s infinite, pulse 8s infinite;
+    transform: translateY(-20em) translateZ(-100px) translateX(0);
+  }
+  
+  .ball:nth-child(2) {
+    animation-delay: -100ms;
+  }
+  
+  .ball:nth-child(3) {
+    animation-delay: -200ms;
+  }
+  
+  .ball:nth-child(4) {
+    animation-delay: -300ms;
+  }
+  
+  .ball:nth-child(5) {
+    animation-delay: -400ms;
+  }
+  
+  .ball:nth-child(6) {
+    animation-delay: -500ms;
+  }
+  
+  .ball:nth-child(7) {
+    animation-delay: -600ms;
+  }
+  
+  .ball:nth-child(8) {
+    animation-delay: -700ms;
+  }
+  
+  @keyframes bounce {
+    25% {
+      transform: translateZ(150px);
+    }
+    50% {
+      transform: translateY(3em) translateZ(-150px);
+    }
+    75% {
+      transform: translateZ(150px);
+    }
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: rotateZ(6turn);
+    }
+  }
+  
+  @keyframes pulse {
+    35% {
+      opacity: 1;
+    }
+    50% {
+      opacity: .25;
+    }
+    60% {
+      opacity: 1;
+    }
+  }
+
 /* layout styling */
 nav {
     max-width: var(--max-width);
@@ -207,6 +316,7 @@ nav {
     width: 4em;
     height: 2em;
     padding: .25em;
+    cursor: pointer;
 }
 
 .scroll__arrow > svg {
@@ -383,6 +493,7 @@ footer {
     transform-origin: top;
     transition: all 350ms ease-out;
     border-block: 1px solid transparent;
+    cursor: pointer;
 }
 
 .search__options > li:hover, 
