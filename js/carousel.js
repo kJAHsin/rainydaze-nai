@@ -18,6 +18,29 @@ const fetchProducts = () => {
 		img.dataset.prodID = `${product.id}`;
 		img.dataset.salePrice = product.discountedPrice;
 		carouselCards[idx].append(img);
+
+		// creating overlay for carousel cards
+		const overLay = document.createElement("div");
+		overLay.classList.add("carousel__overlay");
+		carouselCards[idx].append(overLay);
+
+		// adding title to card
+		const productName = document.createElement("h3");
+		const nameArray = product.title.split(" ");
+		// adjusting for different lengths of title
+		// filtering out "rainy days" and "jacket" 
+		if (nameArray.length === 4) {
+			productName.innerText = `${nameArray[2]}`;
+		}
+		else {
+			productName.innerText = `${nameArray[2]} ${nameArray[3]}`;
+		}		
+		overLay.appendChild(productName);
+
+		const productPrice = document.createElement("h3");
+		productPrice.innerText = `${product.discountedPrice}`;
+		overLay.appendChild(productPrice);
+
 	}))
 	.catch((err) => alert(`you got an error bro: ${err}`))
 };

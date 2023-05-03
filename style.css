@@ -298,12 +298,37 @@ nav {
 }
 
 .carousel__card {
+    position: relative;
     width: 8em;
     cursor: pointer;
     border-radius: .5em;
     overflow: hidden;
     background-color: white;
     padding: 1em;
+}
+
+/* carousel card overlay */
+.carousel__overlay {
+    height: 60%;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    margin-top: auto;
+    display: grid;
+    place-content: center;
+    text-align: end;
+    padding: 1em;
+    color: white;
+    background-color: var(--clr-primary);
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 350ms ease-out, opacity 250ms ease-in 100ms;
+}
+
+.carousel__card:hover > .carousel__overlay, 
+.carousel__card:focus-visible > .carousel__overlay {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 /* scroll arrows */
