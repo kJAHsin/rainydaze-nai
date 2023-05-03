@@ -10,7 +10,6 @@ export const toggleNav = () => {
 	const navToggle = document.querySelector(".hamburger__link");
 	navToggle.addEventListener("click", () => {
 		if (burgerClosed.ariaExpanded === "false") {
-			console.log("open nav toggle");
 			// add class to nav toggle
             burgerTop.classList.add("navOpenTop");
             burgerMid.classList.add("navOpenMid");
@@ -22,7 +21,6 @@ export const toggleNav = () => {
             // set ariaExpanded to true
 			burgerClosed.ariaExpanded = "true";
 		} else {
-			console.log("close nav toggle");
 			// remove class from nav toggle
 			burgerTop.classList.remove("navOpenTop");
             burgerMid.classList.remove("navOpenMid");
@@ -30,7 +28,6 @@ export const toggleNav = () => {
 
 			// remove hide class from navLinks
 			navLinks.classList.add("hidden")
-			console.log(navLinks.classList)
 
             // set ariaExpanded to false
 			burgerClosed.ariaExpanded = "false";

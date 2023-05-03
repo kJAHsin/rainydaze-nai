@@ -14,7 +14,6 @@ scrollArrowL.addEventListener("click", () => {
 	if (translateX <= 75) {
 		translateX += 25;
 		carousel.style.transform = `translateX(${translateX}%)`;
-		console.log(carousel.style.transform)
 	}	
 })
 
@@ -22,6 +21,5 @@ scrollArrowR.addEventListener("click", () => {
 	if (translateX >= -75) {
 		translateX -= 25;
 		carousel.style.transform = `translateX(${translateX}%)`;
-		console.log(carousel.style.transform)
 	}	
 })
