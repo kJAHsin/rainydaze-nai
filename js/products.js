@@ -1,5 +1,7 @@
 import { toggleNav } from "./navToggle.js";
 import { search } from "./search-bar.js";
+import { loaderHide } from "./loader.js";
+loaderHide();
 
 const apiURL = "https://api.noroff.dev/api/v1/rainy-days";
 const productContainer = document.querySelector(".products__container");
@@ -48,12 +50,6 @@ const fetchProducts = () => {
 		.catch((err) => alert(`you got an error bro: ${err}`));
 };
 
-function loaderHide() {
-	window.addEventListener("load", () => {
-		const loader = document.querySelector(".loader");
-		loader.classList.toggle("hide");
-	});
-}
 
 // opening product modal
 const productModal = document.getElementById("productModal");
@@ -134,7 +130,6 @@ window.addEventListener("mousemove", () => {
 // calling functions
 fetchProducts();
 toggleNav();
-loaderHide();
 
 window.addEventListener("load", () => {
 	createModalContainer();

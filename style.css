@@ -410,6 +410,7 @@ footer {
     position: relative;
     justify-content: center;
     background-color: var(--clr-secondary);
+    z-index: -1;
 }
 
 .footer__wrapper {

@@ -1,6 +1,8 @@
 const apiURL = "https://api.noroff.dev/api/v1/rainy-days";
 const carouselCards = document.querySelectorAll(".carousel__card");
 
+
+// populate carousel cards
 const fetchProducts = () => {
 	fetch(apiURL)
 	.then((data) => {
@@ -12,12 +14,15 @@ const fetchProducts = () => {
 		}
 	})
 	.then((data) => data.forEach((product, idx) => {
+		// create image elements for carousel slides
 		const img = document.createElement("img");
 		img.src = `${product.image}`;
 		img.alt = `${product.description}`;
 		img.dataset.prodID = `${product.id}`;
 		img.dataset.salePrice = `${product.discountedPrice}`;
 		carouselCards[idx].append(img);
+
+		// link to products html on click
 		carouselCards.forEach(card => {
 			card.addEventListener("click", () => {
 				location.href = "./products.html";
@@ -42,6 +47,7 @@ const fetchProducts = () => {
 		}		
 		overLay.appendChild(productName);
 
+		// add price tag to overlay
 		const productPrice = document.createElement("h3");
 		productPrice.innerText = `$${product.discountedPrice}`;
 		overLay.appendChild(productPrice);
