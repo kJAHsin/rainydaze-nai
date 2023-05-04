@@ -4,9 +4,9 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="filterable list of all products">
+		<meta name="description" content="filterable list of all products" />
 		<link rel="stylesheet" href="./style.css" />
-        <script type="module" src="./js/products.js"></script>
+		<script type="module" src="./js/products.js"></script>
 		<title>Rainydays Jacket Co. | Products</title>
 	</head>
 	<body>
@@ -25,70 +25,142 @@
 		<header>
 			<nav class="flex">
 				<a href="./index.html" class="logo"
-					><img src="./images/logo.png" alt="Rainydays logo link to home page"
+					><img
+						src="./images/logo.png"
+						alt="Rainydays logo link to home page"
 				/></a>
 				<ul class="nav__links flex hidden">
-                    <li><a href="./index.html" class="nav__link" data-disabled="false">home</a></li>
-					<li><a href="./products.html" class="nav__link" data-disabled="true">products</a></li>
-                    <li><a href="./cart.html" class="nav__link" data-disabled="false">shopping cart</a></li>
-                </ul>
-                <div class="hamburger__link">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="hamburger__link"
-                        id="burgerClosed"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        aria-expanded="false"
-						role="button">
-                        <path d="M4 6l16 0" id="topLine" class="top__line"></path>
-                        <path d="M4 12l16 0" id="midLine" class="mid__line"></path>
-                        <path d="M4 18l16 0" id="botLine" class="bot__line"></path>
-                    </svg>
-                </div>            
+					<li>
+						<a
+							href="./index.html"
+							class="nav__link"
+							data-disabled="false"
+							>home</a
+						>
+					</li>
+					<li>
+						<a
+							href="./products.html"
+							class="nav__link"
+							data-disabled="true"
+							>products</a
+						>
+					</li>
+					<li>
+						<a
+							href="./cart.html"
+							class="nav__link"
+							data-disabled="false"
+							>shopping cart</a
+						>
+					</li>
+				</ul>
+				<div class="hamburger__link">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="hamburger__link"
+						id="burgerClosed"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						stroke-width="2"
+						stroke="currentColor"
+						fill="none"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						aria-expanded="false"
+						role="button"
+					>
+						<path
+							d="M4 6l16 0"
+							id="topLine"
+							class="top__line"
+						></path>
+						<path
+							d="M4 12l16 0"
+							id="midLine"
+							class="mid__line"
+						></path>
+						<path
+							d="M4 18l16 0"
+							id="botLine"
+							class="bot__line"
+						></path>
+					</svg>
+				</div>
 			</nav>
 		</header>
 		<main class="flex column">
 			<h1 class="sr-only">Search through all of our products!</h1>
-            <div class="searchbar__container">
-                <!-- search bar -->
-                <div class="searchbar__wrapper flex">
-                    <input type="text" name="jacketSearch" id="jacketSearch" placeholder="Search our collection...">
-                    <label for="jacketSearch" class="search__label">
-						<span class="sr-only">search and filter through products</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="search__icon" id="searchGlass" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path>
-                            <path d="M21 21l-6 -6"></path>
-                        </svg>
-                    </label>
-                </div>
-                
-                <!-- container for search matches and suggestions -->
-                <ul class="search__options flex column" id="searchOptions"></ul>
-            </div>
-            
-            <!-- products container -->
-            <div class="products__container flex"></div>
+			<div class="searchbar__container">
+				<!-- search bar -->
+				<div class="searchbar__wrapper flex">
+					<input
+						type="text"
+						name="jacketSearch"
+						id="jacketSearch"
+						placeholder="Search our collection..."
+					/>
+					<label for="jacketSearch" class="search__label">
+						<span class="sr-only"
+							>search and filter through products</span
+						>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="search__icon"
+							id="searchGlass"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							stroke-width="2"
+							stroke="currentColor"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path
+								d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"
+							></path>
+							<path d="M21 21l-6 -6"></path>
+						</svg>
+					</label>
+				</div>
 
+				<!-- container for search matches and suggestions -->
+				<ul class="search__options flex column" id="searchOptions"></ul>
+			</div>
+
+			<!-- products container -->
+			<div class="products__container flex"></div>
 		</main>
+		<!-- <div class="product__modal">
+			<div class="product__container">
+				<div class="image__container">
+					<img
+						src="https://images.unsplash.com/photo-1530041539828-114de669390e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cmFpbiUyMGNvYXR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+						alt="filler photo"
+						id="individIMG"
+					/>
+				</div>
+				<div class="product__modal-content">
+					<h3>Name of Jacket</h3>
+					<h4>Price</h4>
+					<div class="sizes__wrapper">
+						<p>XS</p>
+						<p>S</p>
+						<p>M</p>
+						<p>L</p>
+						<p>XL</p>
+					</div>
+				</div>
+			</div> -->
+		</div>
 		<footer class="flex">
 			<div class="footer__wrapper flex">
-				<ul
-					class="contact__info flex column"
-				>
-					<li>
-						Rainydays Inc<br />Middlebury, IN 46540
-					</li>
+				<ul class="contact__info flex column">
+					<li>Rainydays Inc<br />Middlebury, IN 46540</li>
 					<li>+47 909 ** 063</li>
-					<li>
-						whats_your_problem?@rainydays.wtf
-					</li>
+					<li>whats_your_problem?@rainydays.wtf</li>
 				</ul>
 				<div class="social__icons flex">
 					<svg
