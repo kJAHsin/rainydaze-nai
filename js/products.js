@@ -4,7 +4,6 @@ import { search } from "./search-bar.js";
 const apiURL = "https://api.noroff.dev/api/v1/rainy-days";
 const productContainer = document.querySelector(".products__container");
 
-
 const fetchProducts = () => {
 	fetch(apiURL)
 		.then((data) => {
@@ -15,7 +14,7 @@ const fetchProducts = () => {
 			}
 		})
 		.then((data) =>
-			data.forEach(product => {
+			data.forEach((product) => {
 				// creating div for product card
 				// attaching all product information from api to div
 				const productCard = document.createElement("div");
@@ -38,10 +37,9 @@ const fetchProducts = () => {
 			})
 		)
 
-        // catching error from if loop
+		// catching error from if loop
 		.catch((err) => alert(`you got an error bro: ${err}`));
 };
-
 
 function loaderHide() {
 	window.addEventListener("load", () => {
@@ -49,10 +47,6 @@ function loaderHide() {
 		loader.classList.toggle("hide");
 	});
 }
-
-
-
-
 
 // opening product modal
 const productModal = document.getElementById("productModal");
@@ -64,77 +58,38 @@ function hideProductModal() {
 	productModal.classList.add("hide__product-modal");
 }
 
-
-
 // creating content for product modal
 function createModal() {
 	const productContainer = document.createElement("div");
-	productContainer.classList.add("product__container");
-	productContainer.innerHTML = `<div class="image__container">
-	<img
-		src="${imageSource}"
-		alt=""
-		id="individIMG"
-	/>
-</div>
-<div class="product__modal-content">
-	<h3>Name of Jacket</h3>
-	<h4>Price</h4>
-	<p id="productDescription"></p>
-	<div class="sizes__wrapper">
-		<p>XS</p>
-		<p>S</p>
-		<p>M</p>
-		<p>L</p>
-		<p>XL</p>
-	</div>
-	<button class="add__cart" id="addCart">Add to cart</button>
-</div>`
+	productContainer.classList.add("");
+	productContainer.innerHTML = ``;
 }
 
 // setting variables for modal
-window.addEventListener("click", () => {
+window.addEventListener("mousemove", () => {
 	const productCards = document.querySelectorAll("#productCard");
-	productCards.forEach(card => {
+	productCards.forEach((card) => {
 		card.addEventListener("click", () => {
 			showProductModal();
-		})
-	})
+		});
+	});
 	const closeModal = document.getElementById("modalX");
 	closeModal.addEventListener("click", () => {
 		hideProductModal();
-	})
-
-})
-
-
-
-
-
-
-
-
-
-
-
-
+	});
+});
 
 // calling functions
 fetchProducts();
 toggleNav();
 loaderHide();
 
-
-
-
 const searchIcon = document.getElementById("searchGlass");
 searchIcon.addEventListener("click", () => {
 	search();
-})
+});
 
 const searchBar = document.getElementById("jacketSearch");
 searchBar.addEventListener("click", () => {
 	search();
-})
-
-
+});
