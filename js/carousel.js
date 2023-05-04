@@ -16,7 +16,7 @@ const fetchProducts = () => {
 		img.src = `${product.image}`;
 		img.alt = `${product.description}`;
 		img.dataset.prodID = `${product.id}`;
-		img.dataset.salePrice = product.discountedPrice;
+		img.dataset.salePrice = `${product.discountedPrice}`;
 		carouselCards[idx].append(img);
 
 		// creating overlay for carousel cards

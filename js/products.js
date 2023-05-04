@@ -19,13 +19,13 @@ const fetchProducts = () => {
 				// attaching all product information from api to div
 				const productCard = document.createElement("div");
 				productCard.classList.add("product");
-				productCard.dataset.productID = `${product.id}`;
-				productCard.dataset.title = `${product.title}`;
-				productCard.dataset.gender = `${product.gender}`;
-				productCard.dataset.size = `${product.sizes}`;
-				productCard.dataset.baseColor = `${product.baseColor}`;
+				productCard.dataset.productID = product.id;
+				productCard.dataset.title = product.title;
+				productCard.dataset.gender = product.gender;
+				productCard.dataset.size = product.sizes;
+				productCard.dataset.baseColor = product.baseColor;
 				productCard.dataset.origPrice = product.price;
-				productCard.dataset.salePrice = product.discountedPrice;
+				productCard.dataset.salePrice = `$${product.discountedPrice}`;
 				productCard.setAttribute("id", "productCard");
 				productContainer.appendChild(productCard);
 
@@ -34,6 +34,13 @@ const fetchProducts = () => {
 				productIMG.src = `${product.image}`;
 				productIMG.alt = `${product.description}`;
 				productCard.append(productIMG);
+
+				// creating card overlay
+				const overlay = document.createElement("div");
+				overlay.classList.add("product__overlay");
+				overlay.innerHTML = `<h2>$${product.discountedPrice}</h2>
+				<h4>${product.title}</h4>`
+				productCard.append(overlay);
 			})
 		)
 
@@ -72,10 +79,10 @@ function createModalContainer() {
 		id="individIMG"
 	/>
 	</div>
-	<div class="product__modal-content">
+	<div class="product__modal-content" id="productContent">
 		<h3></h3>
 		<h4></h4>
-		<p id="productDescription"></p>
+		<p></p>
 		<div class="sizes__wrapper">
 			<p>XS</p>
 			<p>S</p>
@@ -102,7 +109,12 @@ window.addEventListener("mousemove", () => {
 		card.addEventListener("click", (e) => {
 			const cardImage = document.getElementById("individIMG");
 			cardImage.src = e.target.src;
-			
+			cardImage.alt = e.target.alt;
+
+			const cardContent = document.getElementById("productContent");
+			cardContent.querySelector("h3").innerText = e.target.parentElement.dataset.title;
+			cardContent.querySelector("h4").innerText = e.target.parentElement.dataset.salePrice;
+			cardContent.querySelector("p").innerText = e.target.alt;			
 			
 			showProductModal();
 		});
