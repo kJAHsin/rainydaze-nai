@@ -647,8 +647,30 @@ footer {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 1px solid;
+    border: 2px solid var(--clr-primary);
     text-align: center;
+    font-weight: 600;
+    color: var(--clr-primary);
+    transition: 350ms ease-out 20ms;
+}
+
+.sizes__wrapper > p:hover, 
+.sizes__wrapper > p:focus-visible {
+    background-color: var(--clr-secondary);
+    color: white;
+    animation: hoverBounce 2s linear infinite;
+}
+
+@keyframes hoverBounce {
+    47% {
+        transform: translateY(-5px);
+    }
+    20%, 67%, 72%, 100% {
+        transform: translateY(0);
+    }
+    83% {
+        transform: translateY(-2px);
+    }
 }
 
 /* hiding product modal */

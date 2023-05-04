@@ -56,7 +56,6 @@ const productModal = document.getElementById("productModal");
 
 function showProductModal() {
 	productModal.classList.remove("hide__product-modal");
-	
 }
 function hideProductModal() {
 	productModal.classList.add("hide__product-modal");
