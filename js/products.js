@@ -27,6 +27,7 @@ const fetchProducts = () => {
 				productCard.dataset.baseColor = `${product.baseColor}`;
 				productCard.dataset.origPrice = product.price;
 				productCard.dataset.salePrice = product.discountedPrice;
+				productCard.setAttribute("id", "productCard");
 				productContainer.appendChild(productCard);
 
 				// creating and appending product image
@@ -48,6 +49,75 @@ function loaderHide() {
 		loader.classList.toggle("hide");
 	});
 }
+
+
+
+
+
+// opening product modal
+const productModal = document.getElementById("productModal");
+
+function showProductModal() {
+	productModal.classList.remove("hide__product-modal");
+}
+function hideProductModal() {
+	productModal.classList.add("hide__product-modal");
+}
+
+
+
+// creating content for product modal
+function createModal() {
+	const productContainer = document.createElement("div");
+	productContainer.classList.add("product__container");
+	productContainer.innerHTML = `<div class="image__container">
+	<img
+		src="${imageSource}"
+		alt=""
+		id="individIMG"
+	/>
+</div>
+<div class="product__modal-content">
+	<h3>Name of Jacket</h3>
+	<h4>Price</h4>
+	<p id="productDescription"></p>
+	<div class="sizes__wrapper">
+		<p>XS</p>
+		<p>S</p>
+		<p>M</p>
+		<p>L</p>
+		<p>XL</p>
+	</div>
+	<button class="add__cart" id="addCart">Add to cart</button>
+</div>`
+}
+
+// setting variables for modal
+window.addEventListener("click", () => {
+	const productCards = document.querySelectorAll("#productCard");
+	productCards.forEach(card => {
+		card.addEventListener("click", () => {
+			showProductModal();
+		})
+	})
+	const closeModal = document.getElementById("modalX");
+	closeModal.addEventListener("click", () => {
+		hideProductModal();
+	})
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
 
 // calling functions
 fetchProducts();
