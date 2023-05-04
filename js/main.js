@@ -29,7 +29,7 @@ scrollArrowR.addEventListener("click", () => {
 	}
 	else {
 		scrollArrowR.classList.add("disabled");
-	}	
+	}
 })
 
 function loaderHide() {

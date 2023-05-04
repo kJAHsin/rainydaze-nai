@@ -16,6 +16,8 @@ const fetchProducts = () => {
 		})
 		.then((data) =>
 			data.forEach(product => {
+				// creating div for product card
+				// attaching all product information from api to div
 				const productCard = document.createElement("div");
 				productCard.classList.add("product");
 				productCard.dataset.productID = `${product.id}`;
@@ -27,15 +29,13 @@ const fetchProducts = () => {
 				productCard.dataset.salePrice = product.discountedPrice;
 				productContainer.appendChild(productCard);
 
+				// creating and appending product image
 				const productIMG = document.createElement("img");
 				productIMG.src = `${product.image}`;
 				productIMG.alt = `${product.description}`;
 				productCard.append(productIMG);
 			})
 		)
-
-        // set timeout to make sure the products are loaded before searching through them
-        .then(setTimeout(()  => search(), 3000))
 
         // catching error from if loop
 		.catch((err) => alert(`you got an error bro: ${err}`));
@@ -53,3 +53,16 @@ function loaderHide() {
 fetchProducts();
 toggleNav();
 loaderHide();
+
+
+
+
+const searchIcon = document.getElementById("searchGlass");
+searchIcon.addEventListener("click", () => {
+	search();
+})
+
+const searchBar = document.getElementById("jacketSearch");
+searchBar.addEventListener("click", () => {
+	search();
+})
