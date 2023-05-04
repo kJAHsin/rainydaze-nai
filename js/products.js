@@ -66,3 +66,5 @@ const searchBar = document.getElementById("jacketSearch");
 searchBar.addEventListener("click", () => {
 	search();
 })
+
+
