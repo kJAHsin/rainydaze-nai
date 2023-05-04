@@ -33,7 +33,12 @@ export function search() {
 					// showing item if present in search query
 					product.classList.remove("hidden");
 				}
-			}		
+			}
+			
+			// escaping if key pressed is escape
+			if (e.key === "Escape") {
+				clearQuery();
+			}
 
 			
 			// filtering search options from input text
@@ -44,7 +49,7 @@ export function search() {
 				<img src="${productIMG.src}" alt="${productIMG.alt}">
 				</div>
 				<h3>${product.dataset.title}</h3>
-				<h4>${product.dataset.salePrice}</h4>`;
+				<h4>$${product.dataset.salePrice}</h4>`;
 				searchOptions.appendChild(searchOption);
 			}			
 		});

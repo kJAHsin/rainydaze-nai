@@ -475,17 +475,26 @@ footer {
 }
 
 .product {
+    position: relative;
     width: 10em;
     aspect-ratio: 3 / 4;
     flex-shrink: 0;
-    padding: 1em;
     border-radius: .25em;
     background-color: white;
     transition: transform 250ms ease-in-out;
 }
 
+.product > img {
+    padding: 1em;
+}
+
 .product:hover, .product:focus-visible {
     transform: scale(1.05) translate(2px, -2px);
+}
+
+.product:hover > .carousel__overlay, .product:focus-visible > .carousel__overlay {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .searchbar__container {
