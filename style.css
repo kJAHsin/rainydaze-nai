@@ -599,8 +599,8 @@ footer {
     background-color: rgba(60,20,80, .4);
     transform-origin: center;
     opacity: 1;
-    transform: scale(1) rotate(0);
-    transition: opacity 450ms ease-out 100ms, transform 550ms ease-in-out;
+    transform: scale(1);
+    transition: opacity 450ms ease-out 100ms, transform 100ms;
 }
 
 .product__container {
@@ -610,6 +610,10 @@ footer {
     border-radius: 1em;
     padding: 1em;
     background-color: var(--clr-neutral);
+    transform: scale(1) translateZ(0);
+    transform-style: preserve-3d;
+    perspective: 1500px;
+    transition: transform 350ms ease-out 300ms;
 }
 
 .image__container {
@@ -649,7 +653,13 @@ footer {
 /* hiding product modal */
 .hide__product-modal {
     opacity: 0;
-    transform: scale(0) rotate(40deg);
+    transform: scale(0);
+    transition: opacity 450ms ease-out, transform 100ms 400ms;
+}
+
+.hide__product-modal > .product__container {
+    transform: scale(0) translateZ(-2000px);
+    transition: transform 350ms ease-in;
 }
 
 .modalX {

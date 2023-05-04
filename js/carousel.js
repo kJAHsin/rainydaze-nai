@@ -18,6 +18,11 @@ const fetchProducts = () => {
 		img.dataset.prodID = `${product.id}`;
 		img.dataset.salePrice = `${product.discountedPrice}`;
 		carouselCards[idx].append(img);
+		carouselCards.forEach(card => {
+			card.addEventListener("click", () => {
+				location.href = "./products.html";
+			})
+		})
 
 		// creating overlay for carousel cards
 		const overLay = document.createElement("div");

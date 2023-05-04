@@ -114,7 +114,10 @@ window.addEventListener("mousemove", () => {
 			const cardContent = document.getElementById("productContent");
 			cardContent.querySelector("h3").innerText = e.target.parentElement.dataset.title;
 			cardContent.querySelector("h4").innerText = e.target.parentElement.dataset.salePrice;
-			cardContent.querySelector("p").innerText = e.target.alt;			
+			cardContent.querySelector("p").innerText = e.target.alt;
+			
+			// changing title of page when new product is selected
+			document.querySelector("title").innerText = e.target.parentElement.dataset.title;		
 			
 			showProductModal();
 		});
@@ -122,6 +125,9 @@ window.addEventListener("mousemove", () => {
 	const closeModal = document.getElementById("modalX");
 	closeModal.addEventListener("click", () => {
 		hideProductModal();
+
+		// removing product title from page when modal is closed
+		document.querySelector("title").innerText = "Rainydays Jacket Co. | Products";
 	});
 });
 
