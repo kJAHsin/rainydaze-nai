@@ -113,3 +113,22 @@ const searchBar = document.getElementById("jacketSearch");
 searchBar.addEventListener("click", () => {
 	search();
 });
+
+
+
+// attaching id button's href in modal to link to the correct 
+// product description
+function getProductID() {
+	const productCards = document.querySelectorAll(".product > img");
+	productCards.forEach(card => {
+		card.addEventListener("click", (e) => {
+			const product = e.target.parentElement;
+			const productID = product.dataset.productID;
+			const detailsBtn = document.getElementById("showDetails");
+			detailsBtn.href = `/details.html#/${productID}`;
+		})
+	})
+}
+
+// allowing time for the load
+setTimeout(getProductID, 2000);

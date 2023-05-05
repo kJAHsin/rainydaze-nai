@@ -47,3 +47,22 @@ scrollArrowR.addEventListener("click", () => {
 
 
 
+// attaching id button's href in modal to link to the correct 
+// product description
+function getProductID() {
+	const productCards = document.querySelectorAll(".carousel__card > img");	
+	productCards.forEach(card => {
+		card.addEventListener("click", (e) => {
+			const productID = e.target.dataset.prodID;
+			const detailsBtn = document.getElementById("showDetails");
+			detailsBtn.href = `/details.html#/${productID}`;
+			// console.log(detailsBtn.href)
+		})
+	})
+}
+
+// allowing time for the load
+setTimeout(getProductID, 1000);
+
+
+

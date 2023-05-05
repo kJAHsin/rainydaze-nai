@@ -7,7 +7,7 @@ export function hideProductModal() {
 	productModal.classList.add("hide__product-modal");
 
 	// removing product title from page when modal is closed
-	document.querySelector("title").innerText = "Rainydays Jacket Co. | Products";
+	document.querySelector("title").innerText = "Rainydays Jacket Co";
 
 }
 // creating content for product modal
