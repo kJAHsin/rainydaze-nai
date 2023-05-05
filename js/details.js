@@ -1,5 +1,9 @@
 import { loaderHide } from "./loader.js";
 loaderHide();
+// importing nav toggle (hamburger menu) from navToggle js
+import { toggleNav } from "./navToggle.js";
+toggleNav();
+
 
 const productID = window.location.href.split("#").pop();
 const apiURL = `https://api.noroff.dev/api/v1/rainy-days${productID}`;
