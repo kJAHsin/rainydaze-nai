@@ -36,7 +36,7 @@ export function createModalContainer() {
 			<p>L</p>
 			<p>XL</p>
 		</div>
-		<button class="add__cart" id="addCart">Add to cart</button>
+		<a class="button" id="showDetails" href="./details.html">View product details</a>
 		<h5 id="modalX" class="modalX">X</h5>
 	</div>`;
 }
