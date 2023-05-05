@@ -11,6 +11,7 @@ import { loaderHide } from "./loader.js";
 loaderHide();
 
 
+
 // hooking into components of carousel
 const carousel = document.querySelector(".carousel");
 const scrollArrowL = document.querySelector(".scroll__arrow:first-of-type");
@@ -42,3 +43,7 @@ scrollArrowR.addEventListener("click", () => {
 		scrollArrowR.classList.add("disabled");
 	}
 })
+
+
+
+

@@ -42,16 +42,20 @@ export function search() {
 
 			
 			// filtering search options from input text
-			if (title.includes(searchQuery) & searchQuery.length > 0) {	
-				// creating search query option dropdown
-				const searchOption = document.createElement("li");
-				searchOption.innerHTML = `<div class="thumbnail">
-				<img src="${productIMG.src}" alt="${productIMG.alt}">
-				</div>
-				<h3>${product.dataset.title}</h3>
-				<h4>$${product.dataset.salePrice}</h4>`;
-				searchOptions.appendChild(searchOption);
-			}			
+			const queryArray = searchQuery.split(" ");
+			queryArray.forEach(query => {
+				if (title.includes(query) & query.length > 0) {	
+					// creating search query option dropdown
+					const searchOption = document.createElement("li");
+					searchOption.innerHTML = `<div class="thumbnail">
+					<img src="${productIMG.src}" alt="${productIMG.alt}">
+					</div>
+					<h3>${product.dataset.title}</h3>
+					<h4>${product.dataset.salePrice}</h4>`;
+					searchOptions.appendChild(searchOption);
+				}			
+			})
+
 		});
 	});
 }

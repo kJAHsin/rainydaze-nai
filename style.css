@@ -335,6 +335,7 @@ nav {
     transform: translateY(100%);
     opacity: 0;
     transition: transform 550ms ease-out, opacity 350ms ease-in 150ms;
+    pointer-events: none;
 }
 
 .carousel__card:hover > .carousel__overlay, 
@@ -486,6 +487,7 @@ footer {
     background-color: white;
     transition: transform 250ms ease-in-out;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .product > img {
@@ -543,6 +545,7 @@ footer {
 .search__label {
     position: absolute;
     right: 1em;
+    cursor: pointer;
 }
 
 /* search options */
@@ -658,17 +661,21 @@ footer {
 .sizes__wrapper > p:focus-visible {
     background-color: var(--clr-secondary);
     color: white;
-    animation: hoverBounce 2s linear infinite;
+    animation: hoverBounce 1.3s linear infinite;
+    transform-origin: bottom;
 }
 
 @keyframes hoverBounce {
     47% {
         transform: translateY(-5px);
     }
-    20%, 67%, 72%, 100% {
-        transform: translateY(0);
+    72.5% {
+        transform: translateY(0) scaleY(.9);
     }
-    83% {
+    20%, 62%, 75%, 100% {
+        transform: translateY(0) scaleY(1);
+    }
+    86% {
         transform: translateY(-2px);
     }
 }
