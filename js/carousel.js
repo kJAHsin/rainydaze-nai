@@ -5,6 +5,8 @@ import {
 	createModalContainer,
 } from "./showProductModal.js";
 
+import { getProductID } from "./main.js";
+
 const apiURL = "https://api.noroff.dev/api/v1/rainy-days";
 const carouselCards = document.querySelectorAll(".carousel__card");
 
@@ -51,6 +53,7 @@ const fetchProducts = () => {
 				productPrice.setAttribute("id", "overlayPrice");
 				productPrice.innerText = `$${product.discountedPrice}`;
 				overLay.appendChild(productPrice);
+				getProductID();
 			})
 		)
 		.catch((err) => alert(`you got an error bro: ${err}`));
@@ -95,7 +98,6 @@ window.addEventListener("mousemove", () => {
 			showProductModal();
 		});
 	});
-
 
 	// closing modal with X or by clicking outside of modal
 	const closeModal = document.getElementById("modalX");

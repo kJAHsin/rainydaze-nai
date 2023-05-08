@@ -49,7 +49,7 @@ scrollArrowR.addEventListener("click", () => {
 
 // attaching id button's href in modal to link to the correct 
 // product description
-function getProductID() {
+export function getProductID() {
 	const productCards = document.querySelectorAll(".carousel__card > img");	
 	productCards.forEach(card => {
 		card.addEventListener("click", (e) => {
@@ -62,7 +62,5 @@ function getProductID() {
 }
 
 // allowing for dom-content load
-addEventListener("DOMContentLoaded", () => {
-	getProductID();
-})
+addEventListener("DOMContentLoaded", getProductID);
 
