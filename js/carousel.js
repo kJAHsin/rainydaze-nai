@@ -95,6 +95,9 @@ window.addEventListener("mousemove", () => {
 			showProductModal();
 		});
 	});
+
+
+	// closing modal with X or by clicking outside of modal
 	const closeModal = document.getElementById("modalX");
 
 	productModal.addEventListener("click", (e) => {

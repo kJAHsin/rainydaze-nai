@@ -2,6 +2,15 @@
 export const productModal = document.getElementById("productModal");
 export function showProductModal() {
 	productModal.classList.remove("hide__product-modal");
+
+	// selecting size of product
+	const sizeSelectors = document.querySelectorAll(".sizes__wrapper > p");
+	sizeSelectors.forEach(size => {
+		size.classList.remove("sizes__selected"); 
+		size.addEventListener("click", () => {
+			size.classList.toggle("sizes__selected");
+		})
+	})
 }
 export function hideProductModal() {
 	productModal.classList.add("hide__product-modal");
@@ -20,8 +29,8 @@ export function createModalContainer() {
 
 	productContainer.innerHTML = `<div class="image__container">
 	<img
-		src=""
-		alt=""
+		src="#"
+		alt="placeholder image"
 		id="individIMG"
 	/>
 	</div>

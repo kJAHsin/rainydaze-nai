@@ -669,6 +669,11 @@ footer {
     transform-origin: bottom;
 }
 
+.sizes__selected {
+    background-color: var(--clr-secondary);
+    color: white;
+}
+
 @keyframes hoverBounce {
     47% {
         transform: translateY(-5px);

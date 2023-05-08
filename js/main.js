@@ -61,8 +61,8 @@ function getProductID() {
 	})
 }
 
-// allowing time for the load
-setTimeout(getProductID, 1000);
-
-
+// allowing for dom-content load
+addEventListener("DOMContentLoaded", () => {
+	getProductID();
+})
 
