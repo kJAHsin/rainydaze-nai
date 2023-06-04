@@ -59,6 +59,22 @@ export function search() {
 		});
 	});
 
+	// searching with click on searchGlass
+	const searchGlass = document.getElementById("searchGlass");
+	searchGlass.addEventListener("click", () => {
+		let searchQuery = searchBar.value.toLowerCase();
+		clearQuery();
+		products.forEach(product => {
+			const title = product.dataset.title.toLowerCase();
+			product.classList.add("hidden");
+			if (title.includes(searchQuery)) {
+				// showing item if present in search query
+				product.classList.remove("hidden");
+			}
+		})
+	})
+
+
 	// closing search list when clicked outside
 	const notList = document.querySelectorAll(":not(.searchOptions)");
 	notList.forEach(item => {
