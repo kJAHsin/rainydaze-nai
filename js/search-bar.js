@@ -58,4 +58,12 @@ export function search() {
 			});
 		});
 	});
+
+	// closing search list when clicked outside
+	const notList = document.querySelectorAll(":not(.searchOptions)");
+	notList.forEach(item => {
+		item.addEventListener("click", () => {
+			clearQuery();
+		})
+	})
 }
