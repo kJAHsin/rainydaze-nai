@@ -83,8 +83,33 @@ window.addEventListener("mousemove", () => {
 			document.querySelector("title").innerText = e.target.parentElement.dataset.title;		
 			
 			showProductModal();
-		});
+		});		
 	});
+
+	// poplate product modal by clicking on listitems in searchbar
+	const searchList = document.querySelectorAll("#searchOptions > li");
+	searchList.forEach(li => {
+		li.addEventListener("click", (e) => {
+			const listItem = e.target.parentElement;
+			const cardImage = document.getElementById("individIMG");
+
+			cardImage.src = listItem.querySelector(".thumbnail > img").src;
+			cardImage.alt = listItem.querySelector(".thumbnail > img ").alt;
+
+			const cardContent = document.getElementById("productContent");
+			cardContent.querySelector("h3").innerText = listItem.querySelector("h3").innerText;
+			cardContent.querySelector("h4").innerText = listItem.querySelector("h4").innerText;
+			cardContent.querySelector("p").innerText = listItem.querySelector(".thumbnail > img").alt;
+
+			// changing title of page when new product is selected
+			document.querySelector("title").innerText = e.target.parentElement.dataset.title;		
+			
+			showProductModal();
+		})
+	})
+
+
+	// closing modal while clicking outside modal and also clicking x to close
 	const closeModal = document.getElementById("modalX");
 	
 	productModal.addEventListener("click", (e) => {

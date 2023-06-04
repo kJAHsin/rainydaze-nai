@@ -1,11 +1,17 @@
 // function resets search query suggestions
 function clearQuery() {
 	const currentOptions = searchOptions.querySelectorAll("li");
-		currentOptions.forEach(option => {
-			option.remove();
-		})
+	currentOptions.forEach((option) => {
+		option.remove();
+	});
 }
 
+// escaping if key pressed is escape
+window.addEventListener("keyup", (e) => {
+	if (e.key === "Escape") {
+		clearQuery();
+	}
+});
 
 // filter through products with search
 export function search() {
@@ -19,7 +25,7 @@ export function search() {
 	// (e) for use in if loop to see if it is the enter key
 	searchBar.addEventListener("keyup", (e) => {
 		let searchQuery = searchBar.value.toLowerCase();
-		clearQuery();		
+		clearQuery();
 		products.forEach((product) => {
 			const productIMG = product.querySelector("img");
 			const title = product.dataset.title.toLowerCase();
@@ -34,17 +40,12 @@ export function search() {
 					product.classList.remove("hidden");
 				}
 			}
-			
-			// escaping if key pressed is escape
-			if (e.key === "Escape") {
-				clearQuery();
-			}
 
-			
 			// filtering search options from input text
+			// split to search for all words in string, not just first or complete
 			const queryArray = searchQuery.split(" ");
-			queryArray.forEach(query => {
-				if (title.includes(query) & query.length > 0) {	
+			queryArray.forEach((query) => {
+				if (title.includes(query) & (query.length > 0)) {
 					// creating search query option dropdown
 					const searchOption = document.createElement("li");
 					searchOption.innerHTML = `<div class="thumbnail">
@@ -53,10 +54,8 @@ export function search() {
 					<h3>${product.dataset.title}</h3>
 					<h4>${product.dataset.salePrice}</h4>`;
 					searchOptions.appendChild(searchOption);
-				}			
-			})
-
+				}
+			});
 		});
 	});
 }
-
