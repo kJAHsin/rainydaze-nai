@@ -659,6 +659,7 @@ footer {
     font-weight: 600;
     color: var(--clr-primary);
     transition: 350ms ease-out 20ms;
+    cursor: pointer;
 }
 
 .sizes__wrapper > p:hover, 
@@ -669,7 +670,7 @@ footer {
     transform-origin: bottom;
 }
 
-.sizes__selected {
+.sizes__wrapper > p.sizes__selected {
     background-color: var(--clr-secondary);
     color: white;
 }

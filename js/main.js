@@ -62,5 +62,5 @@ export function getProductID() {
 }
 
 // allowing for dom-content load
-addEventListener("DOMContentLoaded", getProductID);
+window.addEventListener("DOMContentLoaded", getProductID);
 

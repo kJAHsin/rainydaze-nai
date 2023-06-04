@@ -6,9 +6,8 @@ export function showProductModal() {
 	// selecting size of product
 	const sizeSelectors = document.querySelectorAll(".sizes__wrapper > p");
 	sizeSelectors.forEach(size => {
-		size.classList.remove("sizes__selected"); 
-		size.addEventListener("click", () => {
-			size.classList.toggle("sizes__selected");
+		size.addEventListener("click", (e) => {
+			console.log(e.target.classList)
 		})
 	})
 }
