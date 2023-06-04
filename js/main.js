@@ -45,8 +45,6 @@ scrollArrowR.addEventListener("click", () => {
 })
 
 
-
-
 // attaching id button's href in modal to link to the correct 
 // product description
 export function getProductID() {
@@ -63,4 +61,3 @@ export function getProductID() {
 
 // allowing for dom-content load
 window.addEventListener("DOMContentLoaded", getProductID);
-

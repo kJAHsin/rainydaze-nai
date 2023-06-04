@@ -51,3 +51,15 @@ const fetchDetails = () => {
 }
 
 fetchDetails();
+
+// selecting sizes 
+const sizeSelectors = document.querySelectorAll(".sizes__wrapper > p");
+
+sizeSelectors.forEach(size => {
+    size.addEventListener("click", (e) => {
+        sizeSelectors.forEach(size => {
+            size.classList.remove("sizes__selected");
+        })
+        e.target.classList.add("sizes__selected");
+    })
+})

@@ -218,7 +218,7 @@ img {
     }
   }
 
-  
+
 /* layout styling */
 nav {
     max-width: var(--max-width);
@@ -667,7 +667,8 @@ footer {
 .sizes__wrapper > p:focus-visible {
     background-color: var(--clr-secondary);
     color: white;
-    animation: hoverBounce 1.3s linear infinite;
+    animation: hoverBounce 1.3s linear;
+    animation-iteration-count: 2;
     transform-origin: bottom;
 }
 
@@ -749,11 +750,6 @@ footer {
 .details__content > button {
     align-self: center;
 }
-
-
-
-
-
 
 
 

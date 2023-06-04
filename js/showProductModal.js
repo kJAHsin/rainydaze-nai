@@ -7,7 +7,10 @@ export function showProductModal() {
 	const sizeSelectors = document.querySelectorAll(".sizes__wrapper > p");
 	sizeSelectors.forEach(size => {
 		size.addEventListener("click", (e) => {
-			console.log(e.target.classList)
+			sizeSelectors.forEach(size => {
+				size.classList.remove("sizes__selected");
+			})
+			e.target.classList.add("sizes__selected");
 		})
 	})
 }
