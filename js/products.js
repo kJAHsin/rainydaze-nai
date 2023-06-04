@@ -102,7 +102,7 @@ window.addEventListener("mousemove", () => {
 			cardContent.querySelector("p").innerText = listItem.querySelector(".thumbnail > img").alt;
 
 			// changing title of page when new product is selected
-			document.querySelector("title").innerText = e.target.parentElement.dataset.title;		
+			document.querySelector("title").innerText = listItem.querySelector("h3").innerText;		
 			
 			showProductModal();
 		})
